@@ -15,14 +15,15 @@ class EmojifyJsAsset extends AssetBundle
         'css/basic/emojify.css'
     ];
 
+    public $js = [
+        'js/emojify.js'
+    ];
+
 
     public function publish($am)
     {
         parent::publish($am);
-
-        \Yii::$app->controller->view->registerJsFile('https://raw.githubusercontent.com/Ranks/emojify.js/master/dist/js/emojify.js',
-            ['position' => View::POS_HEAD]);
-
+        
         \Yii::$app->controller->view->registerJs('emojify.setConfig({
   img_dir: "'.$this->baseUrl.'/images/basic",
   emoji_image_extension: \'png\',
