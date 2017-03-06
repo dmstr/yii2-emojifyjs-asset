@@ -9,7 +9,8 @@ use yii\web\View;
  */
 class EmojifyJsAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/emojify.js/dist';
+    # TODO: using files from https://github.com/BoboTiG/emojify.js, due to https://github.com/Ranks/emojify.js/pull/165
+    public $sourcePath = __DIR__.'/assets';
 
     public $css = [
         'css/basic/emojify.css'
