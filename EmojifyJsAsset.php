@@ -3,6 +3,7 @@
 namespace dmstr\web;
 
 use yii\web\View;
+use yii\web\AssetBundle;
 
 /**
  * This is just an example.
